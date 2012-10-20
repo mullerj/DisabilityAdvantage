@@ -15,26 +15,25 @@
 
             <div class="inputs-row">
                 <label for="disabilityType">Your child's disability: </label>
-                <select name="disabilityType">
-                    <option value="test">Test</option>
+                <select name="disabilityType" data-bind="foreach: Disabilities, value: SelectedDisability">
+                    <option data-bind="attr: {value: ID}, text: Name"></option>
                 </select>
             </div>
 
             <div class="inputs-row">
                 <label for="grade">Your child's grade: </label>
-                <select name="grade">
-                    <option value="1">One</option>
+                <select name="grade" data-bind="foreach: Grades, value: SelectedGrade">
+                    <option data-bind="attr: {value: ID}, text: Name"></option>
                 </select>
             </div>
 
             <div class="inputs-row">
                 <label for="schoolDivision">Your school division: </label>
-                <select name="schoolDivision">
-                    <option>Test</option>
-                </select>
+                <input type="search" class="search-query" placeholder="County name" data-bind="value: SelectedDivision" />
             </div>
 
-            <button type="submit" value="search" class="search-button btn btn-primary">
+            <br />
+            <button type="submit" value="search" class="search-button btn btn-primary" data-bind="click: Search">
                 <i class="icon-search"></i>
                 Search
             </button>
@@ -42,14 +41,14 @@
     </div>
     <!--Search results-->
     <div class="row-fluid">
-        <ul class="results">
+        <ul class="results" data-bind="foreach: Schools">
             <li class="results-small row-fluid">
                 <article class="well span12">
                     <div class="row-fluid">
                         <hgroup>
-                            <h4>School 1</h4>
-                            <h5>5% of students have autism</h5>
-                            <h6>2 students with autism out of a total of 10 students</h6>
+                            <h4 data-bind="text: Name">School 1</h4>
+                            <h5><span data-bind="text: DisabilityPercentage"></span>% of students have <span data-bind="text: DisabilityName"></span></h5>
+                            <h6><span data-bind="text: StudentsWithDisabilityCount"></span> students with <span data-bind="text: DisabilityName"></span> out of a total of <span data-bind="text: TotalStudentCount"></span> students</h6>
                         </hgroup>
                     </div>
                 </article>
@@ -57,3 +56,6 @@
         </ul>
     </div>
 </div>
+
+<script type="text/javascript" src="@Url.Content("~/Scripts/knockout-2.1.0.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/Scripts/search.js")"></script>

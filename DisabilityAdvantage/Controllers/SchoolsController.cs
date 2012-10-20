@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DisabilityAdvantage.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -7,12 +8,15 @@ using System.Web.Http;
 
 namespace DisabilityAdvantage.Controllers
 {
-    public class ValuesController : ApiController
+    public class SchoolsController : ApiController
     {
         // GET api/values
-        public IEnumerable<string> Get()
+        public IEnumerable<School> Get(string disability, string grade, string division)
         {
-            return new string[] { "value1", "value2" };
+            return new School[] { 
+                new School { Name = "School 1", StudentsWithDisabilityCount = 2, TotalStudentCount = 4, Disability = disability }, 
+                new School { Name = "School 2", StudentsWithDisabilityCount = 1, TotalStudentCount = 5, Disability = disability }
+            };
         }
 
         // GET api/values/5
