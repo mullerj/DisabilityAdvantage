@@ -27,7 +27,8 @@ namespace DisabilityAdvantage
 
             bundles.Add(new StyleBundle("~/Content/less").Include(
                 "~/Content/less/bootstrap.less",
-                "~/Content/less/responsive.less"));
+                "~/Content/less/responsive.less",
+                "~/Content/less/custom.less"));
 
             bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
                         "~/Content/themes/base/jquery.ui.core.css",

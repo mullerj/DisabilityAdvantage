@@ -2,43 +2,58 @@
     <div class="navbar-inner">
         <div class="container-fluid">
             <a class="brand" href="#">Disability Advantage</a>
+            <ul class="nav">
+                <li class="active"><a href="#">Helping you find schools that will be better for the learning and social environment for your child with special needs.</a></li>
+            </ul>
         </div>
     </div>
 </div>
-<div class="container-fluid">
-    <div class="row-fluid">
-        <div class="hero-unit">
-            <p>Disability Advantage helps you find schools that will be better for the learning and social environment for your child with special needs.</p>
-        </div>
-    </div>
+<div id="mainContent" class="container-fluid">
+    <!--Search criteria-->
     <div class="row-fluid">
         <form class="search-form">
-            
+
             <div class="inputs-row">
-            <label for="disabilityType">Your child's disability: </label>
-            <select name="disabilityType">
-                <option value="test">Test</option>
-            </select>
+                <label for="disabilityType">Your child's disability: </label>
+                <select name="disabilityType">
+                    <option value="test">Test</option>
+                </select>
             </div>
 
             <div class="inputs-row">
-            <label for="grade">Your child's grade: </label>
-            <select name="grade">
-                <option value="1">One</option>
-            </select>
+                <label for="grade">Your child's grade: </label>
+                <select name="grade">
+                    <option value="1">One</option>
+                </select>
             </div>
 
             <div class="inputs-row">
-            <label for="schoolDivision">Your school division: </label>
-            <select name="schoolDivision">
-                <option>Test</option>
-            </select>
+                <label for="schoolDivision">Your school division: </label>
+                <select name="schoolDivision">
+                    <option>Test</option>
+                </select>
             </div>
 
             <button type="submit" value="search" class="search-button btn btn-primary">
                 <i class="icon-search"></i>
-                 Search
+                Search
             </button>
         </form>
+    </div>
+    <!--Search results-->
+    <div class="row-fluid">
+        <ul class="results">
+            <li class="results-small row-fluid">
+                <article class="well span12">
+                    <div class="row-fluid">
+                        <hgroup>
+                            <h4>School 1</h4>
+                            <h5>5% of students have autism</h5>
+                            <h6>2 students with autism out of a total of 10 students</h6>
+                        </hgroup>
+                    </div>
+                </article>
+            </li>
+        </ul>
     </div>
 </div>
