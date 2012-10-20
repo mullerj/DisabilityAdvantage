@@ -10,13 +10,12 @@ namespace DisabilityAdvantage.Controllers
 {
     public class SchoolsController : ApiController
     {
+        private ISchoolRepository _repository = new SchoolRepository();
+
         // GET api/values
         public IEnumerable<School> Get(string disability, string grade, string division)
         {
-            return new School[] { 
-                new School { Name = "School 1", StudentsWithDisabilityCount = 2, TotalStudentCount = 4, Disability = disability }, 
-                new School { Name = "School 2", StudentsWithDisabilityCount = 1, TotalStudentCount = 5, Disability = disability }
-            };
+            return _repository.FetchMany(disability, grade, division);
         }
 
         // GET api/values/5

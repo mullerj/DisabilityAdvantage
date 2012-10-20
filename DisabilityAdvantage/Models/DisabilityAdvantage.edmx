@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DisabilityAdvantage.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="DisabilityAdvantageStoreContainer">
+    <EntitySet Name="ChildCounts" EntityType="DisabilityAdvantage.Store.ChildCounts" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="ChildCounts">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SCHOOL_YR" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="LEVEL_CODE" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DIV_NUM" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DIV_NAME" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="SCH_NUM" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="SCH_NAME" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="GRADE_CODE" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="FEDERAL_RACE_CODE" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="GENDER" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DISABILITY_FLAG" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="LEP_FLAG" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DISADVANTAGED_FLAG" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PRIMARY_DISABILITY_TYPE" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DEC1_CNT" Type="int" Nullable="false" />
+  </EntityType>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="DisabilityAdvantage" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="DisabilityAdvantageContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ChildCounts" EntityType="DisabilityAdvantage.ChildCount" />
+        </EntityContainer>
+        <EntityType Name="ChildCount">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="SCHOOL_YR" Nullable="false" />
+          <Property Type="String" Name="LEVEL_CODE" Nullable="false" />
+          <Property Type="String" Name="DIV_NUM" Nullable="false" />
+          <Property Type="String" Name="DIV_NAME" Nullable="false" />
+          <Property Type="String" Name="SCH_NUM" Nullable="false" />
+          <Property Type="String" Name="SCH_NAME" Nullable="false" />
+          <Property Type="String" Name="GRADE_CODE" Nullable="false" />
+          <Property Type="String" Name="FEDERAL_RACE_CODE" Nullable="false" />
+          <Property Type="String" Name="GENDER" Nullable="false" />
+          <Property Type="String" Name="DISABILITY_FLAG" Nullable="false" />
+          <Property Type="String" Name="LEP_FLAG" Nullable="false" />
+          <Property Type="String" Name="DISADVANTAGED_FLAG" Nullable="false" />
+          <Property Type="String" Name="PRIMARY_DISABILITY_TYPE" Nullable="false" />
+          <Property Type="Int32" Name="DEC1_CNT" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DisabilityAdvantageStoreContainer" CdmEntityContainer="DisabilityAdvantageContainer">
+    <EntitySetMapping Name="ChildCounts">
+      <EntityTypeMapping TypeName="IsTypeOf(DisabilityAdvantage.ChildCount)">
+        <MappingFragment StoreEntitySet="ChildCounts">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="SCHOOL_YR" ColumnName="SCHOOL_YR" />
+          <ScalarProperty Name="LEVEL_CODE" ColumnName="LEVEL_CODE" />
+          <ScalarProperty Name="DIV_NUM" ColumnName="DIV_NUM" />
+          <ScalarProperty Name="DIV_NAME" ColumnName="DIV_NAME" />
+          <ScalarProperty Name="SCH_NUM" ColumnName="SCH_NUM" />
+          <ScalarProperty Name="SCH_NAME" ColumnName="SCH_NAME" />
+          <ScalarProperty Name="GRADE_CODE" ColumnName="GRADE_CODE" />
+          <ScalarProperty Name="FEDERAL_RACE_CODE" ColumnName="FEDERAL_RACE_CODE" />
+          <ScalarProperty Name="GENDER" ColumnName="GENDER" />
+          <ScalarProperty Name="DISABILITY_FLAG" ColumnName="DISABILITY_FLAG" />
+          <ScalarProperty Name="LEP_FLAG" ColumnName="LEP_FLAG" />
+          <ScalarProperty Name="DISADVANTAGED_FLAG" ColumnName="DISADVANTAGED_FLAG" />
+          <ScalarProperty Name="PRIMARY_DISABILITY_TYPE" ColumnName="PRIMARY_DISABILITY_TYPE" />
+          <ScalarProperty Name="DEC1_CNT" ColumnName="DEC1_CNT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Default" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
