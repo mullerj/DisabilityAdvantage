@@ -260,6 +260,8 @@
       <DependentUpon>DisabilityAdvantage.edmx</DependentUpon>
       <LastGenOutput>DisabilityAdvantage.cs</LastGenOutput>
     </Content>
+    <None Include="Properties\PublishProfiles\DisabilityAdvantage - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\DisabilityAdvantage - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
