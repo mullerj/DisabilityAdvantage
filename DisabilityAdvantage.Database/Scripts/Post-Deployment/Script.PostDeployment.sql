@@ -9,4 +9,6 @@ Post-Deployment Script Template
                SELECT * FROM [$(TableName)]					
 --------------------------------------------------------------------------------------
 */
-:r .\ChildCounts_Insert.sql	
+/*
+:r .\ChildCounts_Insert.sql 
+*/	

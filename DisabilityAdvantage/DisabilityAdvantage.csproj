@@ -132,6 +132,23 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AcademicYear.cs">
+      <DependentUpon>DisabilityAdvantage.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ChildCount.cs">
+      <DependentUpon>DisabilityAdvantage.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Class.cs">
+      <DependentUpon>DisabilityAdvantage.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Disability.cs">
+      <DependentUpon>DisabilityAdvantage.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DisabilityAdvantage.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DisabilityAdvantage.Context.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\DisabilityAdvantage.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -142,9 +159,29 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DisabilityAdvantage.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\DisabilityType.cs">
+      <DependentUpon>DisabilityAdvantage.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Division.cs">
+      <DependentUpon>DisabilityAdvantage.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Gender.cs">
+      <DependentUpon>DisabilityAdvantage.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Grade.cs">
+      <DependentUpon>DisabilityAdvantage.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\ISchoolRepository.cs" />
-    <Compile Include="Models\School.cs" />
+    <Compile Include="Models\Race.cs">
+      <DependentUpon>DisabilityAdvantage.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\School.cs">
+      <DependentUpon>DisabilityAdvantage.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\SchoolRepository.cs" />
+    <Compile Include="Models\State.cs">
+      <DependentUpon>DisabilityAdvantage.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -251,10 +288,14 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>DisabilityAdvantage.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <Content Include="Models\DisabilityAdvantage.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DisabilityAdvantage.edmx</DependentUpon>
+      <LastGenOutput>DisabilityAdvantage.Context.cs</LastGenOutput>
+    </Content>
     <Content Include="Models\DisabilityAdvantage.edmx.diagram">
       <DependentUpon>DisabilityAdvantage.edmx</DependentUpon>
     </Content>
-    <Content Include="Models\DisabilityAdvantage.edmx.sql" />
     <Content Include="Models\DisabilityAdvantage.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>DisabilityAdvantage.edmx</DependentUpon>

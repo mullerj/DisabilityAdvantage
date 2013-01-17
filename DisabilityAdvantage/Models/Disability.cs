@@ -12,18 +12,14 @@ namespace DisabilityAdvantage.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class School
+    public partial class Disability
     {
-        public School()
-        {
-            this.Classes = new HashSet<Class>();
-        }
-    
         public int Number { get; set; }
-        public string Name { get; set; }
-        public int DivisionNumber { get; set; }
+        public int ClassNumber { get; set; }
+        public int DisabilityTypeNumber { get; set; }
+        public int StudentCount { get; set; }
     
-        public virtual ICollection<Class> Classes { get; set; }
-        public virtual Division Division { get; set; }
+        public virtual Class Class { get; set; }
+        public virtual DisabilityType DisabilityType { get; set; }
     }
 }

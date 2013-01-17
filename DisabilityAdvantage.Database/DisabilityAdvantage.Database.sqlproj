@@ -64,11 +64,26 @@
   <ItemGroup>
     <Build Include="dbo\Tables\ChildCounts.sql" />
     <None Include="Scripts\Post-Deployment\ChildCounts_Insert.sql" />
+    <Build Include="dbo\Tables\State.sql" />
+    <Build Include="dbo\Tables\Division.sql" />
+    <Build Include="dbo\Tables\School.sql" />
+    <Build Include="dbo\Tables\Grade.sql" />
+    <Build Include="dbo\Tables\Race.sql" />
+    <Build Include="dbo\Tables\Gender.sql" />
+    <Build Include="dbo\Tables\DisabilityType.sql" />
+    <Build Include="dbo\Tables\AcademicYear.sql" />
+    <Build Include="dbo\Tables\Disability.sql" />
+    <Build Include="dbo\Tables\Class.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\Post-Deployment\Script.PostDeployment.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="DisabilityAdvantage.Database.publish.xml" />
+    <None Include="DisabilityAdvantage.Database.local.publish.xml" />
+    <None Include="Scripts\Post-Deployment\AcademicYear_Insert.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="DisabilityAdvantage.Database.refactorlog" />
   </ItemGroup>
 </Project>
