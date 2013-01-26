@@ -12,3 +12,10 @@ Post-Deployment Script Template
 /*
 :r .\ChildCounts_Insert.sql 
 */	
+:r .\AcademicYear_Insert.sql
+:r .\DisabilityType_Insert.sql
+:r .\Division_Insert.sql
+:r .\School_Insert.sql
+:r .\Grade_Insert.sql
+:r .\Class_Insert.sql
+:r .\Disability_Insert.sql

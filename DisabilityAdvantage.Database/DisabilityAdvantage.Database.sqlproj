@@ -82,6 +82,12 @@
     <None Include="DisabilityAdvantage.Database.publish.xml" />
     <None Include="DisabilityAdvantage.Database.local.publish.xml" />
     <None Include="Scripts\Post-Deployment\AcademicYear_Insert.sql" />
+    <None Include="Scripts\Post-Deployment\DisabilityType_Insert.sql" />
+    <None Include="Scripts\Post-Deployment\Division_Insert.sql" />
+    <None Include="Scripts\Post-Deployment\Grade_Insert.sql" />
+    <None Include="Scripts\Post-Deployment\School_Insert.sql" />
+    <None Include="Scripts\Post-Deployment\Class_Insert.sql" />
+    <None Include="Scripts\Post-Deployment\Disability_Insert.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="DisabilityAdvantage.Database.refactorlog" />

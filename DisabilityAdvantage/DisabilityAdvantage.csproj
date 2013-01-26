@@ -179,6 +179,7 @@
       <DependentUpon>DisabilityAdvantage.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\SchoolRepository.cs" />
+    <Compile Include="Models\SchoolResult.cs" />
     <Compile Include="Models\State.cs">
       <DependentUpon>DisabilityAdvantage.tt</DependentUpon>
     </Compile>

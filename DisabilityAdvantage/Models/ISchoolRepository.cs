@@ -8,6 +8,6 @@ namespace DisabilityAdvantage.Models
 {
     interface ISchoolRepository
     {
-        IQueryable<School> FetchMany(string disability, string grade, string division);
+        IQueryable<SchoolResult> FetchMany(string disability, string grade, string division);
     }
 }

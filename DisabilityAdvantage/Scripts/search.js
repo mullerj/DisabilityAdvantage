@@ -4,22 +4,19 @@
 
     self.Parent = parent;
     self.Name = ko.observable("");
-    self.StudentsWithDisabilityCount = ko.observable(0);
-    self.TotalStudentCount = ko.observable(0);
-    self.Disability = ko.observable("");
+    self.DisabilityCount = ko.observable(0);
+    self.TotalCount = ko.observable(0);
+    self.DisabilityName = ko.observable("");
     self.DisabilityPercentage = ko.computed(function () {
-        return (self.StudentsWithDisabilityCount() / self.TotalStudentCount()) * 100;
-    });
-    self.DisabilityName = ko.computed(function () {
-        return self.Parent.FindDisabilityName(self.Disability());
+        return (self.DisabilityCount() / self.TotalCount()) * 100;
     });
 
     //Function to map JSON data to observable properties
     self.Map = function (theData) {
         self.Name(theData.Name);
-        self.StudentsWithDisabilityCount(theData.StudentsWithDisabilityCount);
-        self.TotalStudentCount(theData.TotalStudentCount);
-        self.Disability(theData.Disability);
+        self.DisabilityCount(theData.DisabilityCount);
+        self.TotalCount(theData.TotalCount);
+        self.DisabilityName(theData.DisabilityName);
     };
 
     self.Map(data);

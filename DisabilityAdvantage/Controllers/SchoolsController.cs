@@ -13,7 +13,7 @@ namespace DisabilityAdvantage.Controllers
         private ISchoolRepository _repository = new SchoolRepository();
 
         // GET api/values
-        public IEnumerable<School> Get(string disability, string grade, string division)
+        public IEnumerable<SchoolResult> Get(string disability, string grade, string division)
         {
             return _repository.FetchMany(disability, grade, division);
         }
