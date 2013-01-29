@@ -84,4 +84,25 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="ClassNumber" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="5213d8d3-fcf6-4747-927f-657e51389552" ChangeDateTime="01/27/2013 03:27:11">
+    <Property Name="ElementName" Value="[dbo].[School].[Number]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[School]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="eca770ba-419d-4814-ac12-06e1977830f1" ChangeDateTime="01/27/2013 03:42:19">
+    <Property Name="ElementName" Value="[dbo].[Class].[SchoolNumber]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Class]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="SchoolId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="d0255dd6-5ba8-4587-8c9f-a345fdddf0e5" ChangeDateTime="01/29/2013 04:12:33">
+    <Property Name="ElementName" Value="[dbo].[ClassImport].[DivisonNumber]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[ClassImport]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="DivisionNumber" />
+  </Operation>
 </Operations>

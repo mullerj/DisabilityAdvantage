@@ -19,6 +19,7 @@ namespace DisabilityAdvantage.Models
             this.Classes = new HashSet<Class>();
         }
     
+        public int Id { get; set; }
         public int Number { get; set; }
         public string Name { get; set; }
         public int DivisionNumber { get; set; }

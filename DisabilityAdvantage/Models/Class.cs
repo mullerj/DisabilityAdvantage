@@ -20,7 +20,7 @@ namespace DisabilityAdvantage.Models
         }
     
         public int Number { get; set; }
-        public int SchoolNumber { get; set; }
+        public int SchoolId { get; set; }
         public int GradeNumber { get; set; }
         public int AcademicYearNumber { get; set; }
         public int StudentCount { get; set; }

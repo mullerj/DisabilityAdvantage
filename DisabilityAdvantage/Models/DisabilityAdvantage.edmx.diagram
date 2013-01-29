@@ -5,23 +5,23 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="4624f287243e45469c9ba3fbf85171c4" Name="Diagram1">
-        <EntityTypeShape EntityType="DisabilityAdvantageModel.AcademicYear" Width="1.5" PointX="3" PointY="4.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="DisabilityAdvantageModel.ChildCount" Width="1.5" PointX="7.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DisabilityAdvantageModel.Class" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="DisabilityAdvantageModel.Disability" Width="1.5" PointX="7.5" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="DisabilityAdvantageModel.DisabilityType" Width="1.5" PointX="5.25" PointY="5.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="DisabilityAdvantageModel.Division" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="DisabilityAdvantageModel.Gender" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DisabilityAdvantageModel.Grade" Width="1.5" PointX="3" PointY="7" IsExpanded="true" />
-        <EntityTypeShape EntityType="DisabilityAdvantageModel.Race" Width="1.5" PointX="0.75" PointY="9.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DisabilityAdvantageModel.School" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="DisabilityAdvantageModel.State" Width="1.5" PointX="2.75" PointY="9.75" IsExpanded="true" />
-        <AssociationConnector Association="DisabilityAdvantageModel.FK_Class_AcademicYear" ManuallyRouted="false" />
-        <AssociationConnector Association="DisabilityAdvantageModel.FK_Class_GradeNumber" ManuallyRouted="false" />
-        <AssociationConnector Association="DisabilityAdvantageModel.FK_Class_School" ManuallyRouted="false" />
-        <AssociationConnector Association="DisabilityAdvantageModel.FK_Disability_Class" ManuallyRouted="false" />
-        <AssociationConnector Association="DisabilityAdvantageModel.FK_Disability_DisabilityType" ManuallyRouted="false" />
-        <AssociationConnector Association="DisabilityAdvantageModel.FK_School_Division" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DisabilityAdvantageModel.AcademicYear" Width="1.5" PointX="5.75" PointY="0.875" />
+        <EntityTypeShape EntityType="DisabilityAdvantageModel.ChildCount" Width="1.5" PointX="15" PointY="2.125" />
+        <EntityTypeShape EntityType="DisabilityAdvantageModel.Class" Width="1.5" PointX="5.5" PointY="4.5" />
+        <EntityTypeShape EntityType="DisabilityAdvantageModel.Disability" Width="1.5" PointX="0.5" PointY="5.125" />
+        <EntityTypeShape EntityType="DisabilityAdvantageModel.DisabilityType" Width="1.5" PointX="0.5" PointY="0.875" />
+        <EntityTypeShape EntityType="DisabilityAdvantageModel.Division" Width="1.5" PointX="3.875" PointY="1.875" />
+        <EntityTypeShape EntityType="DisabilityAdvantageModel.Gender" Width="1.5" PointX="9" PointY="9.625" />
+        <EntityTypeShape EntityType="DisabilityAdvantageModel.Grade" Width="1.5" PointX="9.375" PointY="6.75" />
+        <EntityTypeShape EntityType="DisabilityAdvantageModel.Race" Width="1.5" PointX="15" PointY="12.625" />
+        <EntityTypeShape EntityType="DisabilityAdvantageModel.School" Width="1.5" PointX="8.875" PointY="3.25" />
+        <EntityTypeShape EntityType="DisabilityAdvantageModel.State" Width="1.5" PointX="0.5" PointY="15.625" />
+        <AssociationConnector Association="DisabilityAdvantageModel.FK_Class_AcademicYear" />
+        <AssociationConnector Association="DisabilityAdvantageModel.FK_Class_GradeNumber" />
+        <AssociationConnector Association="DisabilityAdvantageModel.FK_Class_School" />
+        <AssociationConnector Association="DisabilityAdvantageModel.FK_Disability_Class" />
+        <AssociationConnector Association="DisabilityAdvantageModel.FK_Disability_DisabilityType" />
+        <AssociationConnector Association="DisabilityAdvantageModel.FK_School_Division" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -74,7 +74,7 @@
             <PropertyRef Name="Number" />
           </Key>
           <Property Name="Number" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="SchoolNumber" Type="int" Nullable="false" />
+          <Property Name="SchoolId" Type="int" Nullable="false" />
           <Property Name="GradeNumber" Type="int" Nullable="false" />
           <Property Name="AcademicYearNumber" Type="int" Nullable="false" />
           <Property Name="StudentCount" Type="int" Nullable="false" />
@@ -127,9 +127,10 @@
         </EntityType>
         <EntityType Name="School">
           <Key>
-            <PropertyRef Name="Number" />
+            <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Number" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Number" Type="int" Nullable="false" />
           <Property Name="Name" Type="varchar" Nullable="false" MaxLength="80" />
           <Property Name="DivisionNumber" Type="int" Nullable="false" />
         </EntityType>
@@ -170,10 +171,10 @@
           <End Role="Class" Type="DisabilityAdvantageModel.Store.Class" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="School">
-              <PropertyRef Name="Number" />
+              <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="Class">
-              <PropertyRef Name="SchoolNumber" />
+              <PropertyRef Name="SchoolId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -258,39 +259,39 @@
           <Key>
             <PropertyRef Name="Number" />
           </Key>
-          <Property Name="Number" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="9" Unicode="false" FixedLength="false" />
+          <Property Type="Int32" Name="Number" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" MaxLength="9" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Classes" Relationship="DisabilityAdvantageModel.FK_Class_AcademicYear" FromRole="AcademicYear" ToRole="Class" />
         </EntityType>
         <EntityType Name="ChildCount">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="SCHOOL_YR" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="LEVEL_CODE" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="DIV_NUM" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="DIV_NAME" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="SCH_NUM" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="SCH_NAME" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="GRADE_CODE" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="FEDERAL_RACE_CODE" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="GENDER" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="DISABILITY_FLAG" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="LEP_FLAG" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="DISADVANTAGED_FLAG" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="PRIMARY_DISABILITY_TYPE" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="DEC1_CNT" Type="Int32" Nullable="false" />
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="SCHOOL_YR" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LEVEL_CODE" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DIV_NUM" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DIV_NAME" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SCH_NUM" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SCH_NAME" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="GRADE_CODE" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FEDERAL_RACE_CODE" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="GENDER" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DISABILITY_FLAG" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LEP_FLAG" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DISADVANTAGED_FLAG" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PRIMARY_DISABILITY_TYPE" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="DEC1_CNT" Nullable="false" />
         </EntityType>
         <EntityType Name="Class">
           <Key>
             <PropertyRef Name="Number" />
           </Key>
-          <Property Name="Number" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="SchoolNumber" Type="Int32" Nullable="false" />
-          <Property Name="GradeNumber" Type="Int32" Nullable="false" />
-          <Property Name="AcademicYearNumber" Type="Int32" Nullable="false" />
-          <Property Name="StudentCount" Type="Int32" Nullable="false" />
+          <Property Type="Int32" Name="Number" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="SchoolId" Nullable="false" />
+          <Property Type="Int32" Name="GradeNumber" Nullable="false" />
+          <Property Type="Int32" Name="AcademicYearNumber" Nullable="false" />
+          <Property Type="Int32" Name="StudentCount" Nullable="false" />
           <NavigationProperty Name="AcademicYear" Relationship="DisabilityAdvantageModel.FK_Class_AcademicYear" FromRole="Class" ToRole="AcademicYear" />
           <NavigationProperty Name="Grade" Relationship="DisabilityAdvantageModel.FK_Class_GradeNumber" FromRole="Class" ToRole="Grade" />
           <NavigationProperty Name="School" Relationship="DisabilityAdvantageModel.FK_Class_School" FromRole="Class" ToRole="School" />
@@ -300,10 +301,10 @@
           <Key>
             <PropertyRef Name="Number" />
           </Key>
-          <Property Name="Number" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="ClassNumber" Type="Int32" Nullable="false" />
-          <Property Name="DisabilityTypeNumber" Type="Int32" Nullable="false" />
-          <Property Name="StudentCount" Type="Int32" Nullable="false" />
+          <Property Type="Int32" Name="Number" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="ClassNumber" Nullable="false" />
+          <Property Type="Int32" Name="DisabilityTypeNumber" Nullable="false" />
+          <Property Type="Int32" Name="StudentCount" Nullable="false" />
           <NavigationProperty Name="Class" Relationship="DisabilityAdvantageModel.FK_Disability_Class" FromRole="Disability" ToRole="Class" />
           <NavigationProperty Name="DisabilityType" Relationship="DisabilityAdvantageModel.FK_Disability_DisabilityType" FromRole="Disability" ToRole="DisabilityType" />
         </EntityType>
@@ -311,49 +312,50 @@
           <Key>
             <PropertyRef Name="Number" />
           </Key>
-          <Property Name="Number" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="Code" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="false" />
-          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Type="Int32" Name="Number" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Code" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Disabilities" Relationship="DisabilityAdvantageModel.FK_Disability_DisabilityType" FromRole="DisabilityType" ToRole="Disability" />
         </EntityType>
         <EntityType Name="Division">
           <Key>
             <PropertyRef Name="Number" />
           </Key>
-          <Property Name="Number" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Type="Int32" Name="Number" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Schools" Relationship="DisabilityAdvantageModel.FK_School_Division" FromRole="Division" ToRole="School" />
         </EntityType>
         <EntityType Name="Gender">
           <Key>
             <PropertyRef Name="Number" />
           </Key>
-          <Property Name="Number" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="Code" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
-          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Type="Int32" Name="Number" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Code" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Grade">
           <Key>
             <PropertyRef Name="Number" />
           </Key>
-          <Property Name="Number" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="Code" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Type="Int32" Name="Number" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Code" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Classes" Relationship="DisabilityAdvantageModel.FK_Class_GradeNumber" FromRole="Grade" ToRole="Class" />
         </EntityType>
         <EntityType Name="Race">
           <Key>
             <PropertyRef Name="Number" />
           </Key>
-          <Property Name="Number" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="Code" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Type="Int32" Name="Number" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Code" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="School">
           <Key>
-            <PropertyRef Name="Number" />
+            <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Number" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" Nullable="false" MaxLength="80" Unicode="false" FixedLength="false" />
-          <Property Name="DivisionNumber" Type="Int32" Nullable="false" />
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="Number" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="DivisionNumber" Nullable="false" />
           <NavigationProperty Name="Classes" Relationship="DisabilityAdvantageModel.FK_Class_School" FromRole="School" ToRole="Class" />
           <NavigationProperty Name="Division" Relationship="DisabilityAdvantageModel.FK_School_Division" FromRole="School" ToRole="Division" />
         </EntityType>
@@ -361,13 +363,13 @@
           <Key>
             <PropertyRef Name="Number" />
           </Key>
-          <Property Name="Number" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
-          <Property Name="Abbreviation" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Type="Int32" Name="Number" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Abbreviation" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
         </EntityType>
         <Association Name="FK_Class_AcademicYear">
-          <End Role="AcademicYear" Type="DisabilityAdvantageModel.AcademicYear" Multiplicity="1" />
-          <End Role="Class" Type="DisabilityAdvantageModel.Class" Multiplicity="*" />
+          <End Type="DisabilityAdvantageModel.AcademicYear" Role="AcademicYear" Multiplicity="1" />
+          <End Type="DisabilityAdvantageModel.Class" Role="Class" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="AcademicYear">
               <PropertyRef Name="Number" />
@@ -378,8 +380,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Class_GradeNumber">
-          <End Role="Grade" Type="DisabilityAdvantageModel.Grade" Multiplicity="1" />
-          <End Role="Class" Type="DisabilityAdvantageModel.Class" Multiplicity="*" />
+          <End Type="DisabilityAdvantageModel.Grade" Role="Grade" Multiplicity="1" />
+          <End Type="DisabilityAdvantageModel.Class" Role="Class" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Grade">
               <PropertyRef Name="Number" />
@@ -390,20 +392,20 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Class_School">
-          <End Role="School" Type="DisabilityAdvantageModel.School" Multiplicity="1" />
-          <End Role="Class" Type="DisabilityAdvantageModel.Class" Multiplicity="*" />
+          <End Type="DisabilityAdvantageModel.School" Role="School" Multiplicity="1" />
+          <End Type="DisabilityAdvantageModel.Class" Role="Class" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="School">
-              <PropertyRef Name="Number" />
+              <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="Class">
-              <PropertyRef Name="SchoolNumber" />
+              <PropertyRef Name="SchoolId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Disability_Class">
-          <End Role="Class" Type="DisabilityAdvantageModel.Class" Multiplicity="1" />
-          <End Role="Disability" Type="DisabilityAdvantageModel.Disability" Multiplicity="*" />
+          <End Type="DisabilityAdvantageModel.Class" Role="Class" Multiplicity="1" />
+          <End Type="DisabilityAdvantageModel.Disability" Role="Disability" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Class">
               <PropertyRef Name="Number" />
@@ -414,8 +416,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Disability_DisabilityType">
-          <End Role="DisabilityType" Type="DisabilityAdvantageModel.DisabilityType" Multiplicity="1" />
-          <End Role="Disability" Type="DisabilityAdvantageModel.Disability" Multiplicity="*" />
+          <End Type="DisabilityAdvantageModel.DisabilityType" Role="DisabilityType" Multiplicity="1" />
+          <End Type="DisabilityAdvantageModel.Disability" Role="Disability" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="DisabilityType">
               <PropertyRef Name="Number" />
@@ -426,8 +428,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_School_Division">
-          <End Role="Division" Type="DisabilityAdvantageModel.Division" Multiplicity="1" />
-          <End Role="School" Type="DisabilityAdvantageModel.School" Multiplicity="*" />
+          <End Type="DisabilityAdvantageModel.Division" Role="Division" Multiplicity="1" />
+          <End Type="DisabilityAdvantageModel.School" Role="School" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Division">
               <PropertyRef Name="Number" />
@@ -437,7 +439,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -446,110 +448,111 @@
           <EntitySetMapping Name="AcademicYears">
             <EntityTypeMapping TypeName="DisabilityAdvantageModel.AcademicYear">
               <MappingFragment StoreEntitySet="AcademicYear">
-                <ScalarProperty Name="Number" ColumnName="Number" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Number" ColumnName="Number" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="ChildCounts">
             <EntityTypeMapping TypeName="DisabilityAdvantageModel.ChildCount">
               <MappingFragment StoreEntitySet="ChildCounts">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="SCHOOL_YR" ColumnName="SCHOOL_YR" />
-                <ScalarProperty Name="LEVEL_CODE" ColumnName="LEVEL_CODE" />
-                <ScalarProperty Name="DIV_NUM" ColumnName="DIV_NUM" />
-                <ScalarProperty Name="DIV_NAME" ColumnName="DIV_NAME" />
-                <ScalarProperty Name="SCH_NUM" ColumnName="SCH_NUM" />
-                <ScalarProperty Name="SCH_NAME" ColumnName="SCH_NAME" />
-                <ScalarProperty Name="GRADE_CODE" ColumnName="GRADE_CODE" />
-                <ScalarProperty Name="FEDERAL_RACE_CODE" ColumnName="FEDERAL_RACE_CODE" />
-                <ScalarProperty Name="GENDER" ColumnName="GENDER" />
-                <ScalarProperty Name="DISABILITY_FLAG" ColumnName="DISABILITY_FLAG" />
-                <ScalarProperty Name="LEP_FLAG" ColumnName="LEP_FLAG" />
-                <ScalarProperty Name="DISADVANTAGED_FLAG" ColumnName="DISADVANTAGED_FLAG" />
-                <ScalarProperty Name="PRIMARY_DISABILITY_TYPE" ColumnName="PRIMARY_DISABILITY_TYPE" />
                 <ScalarProperty Name="DEC1_CNT" ColumnName="DEC1_CNT" />
+                <ScalarProperty Name="PRIMARY_DISABILITY_TYPE" ColumnName="PRIMARY_DISABILITY_TYPE" />
+                <ScalarProperty Name="DISADVANTAGED_FLAG" ColumnName="DISADVANTAGED_FLAG" />
+                <ScalarProperty Name="LEP_FLAG" ColumnName="LEP_FLAG" />
+                <ScalarProperty Name="DISABILITY_FLAG" ColumnName="DISABILITY_FLAG" />
+                <ScalarProperty Name="GENDER" ColumnName="GENDER" />
+                <ScalarProperty Name="FEDERAL_RACE_CODE" ColumnName="FEDERAL_RACE_CODE" />
+                <ScalarProperty Name="GRADE_CODE" ColumnName="GRADE_CODE" />
+                <ScalarProperty Name="SCH_NAME" ColumnName="SCH_NAME" />
+                <ScalarProperty Name="SCH_NUM" ColumnName="SCH_NUM" />
+                <ScalarProperty Name="DIV_NAME" ColumnName="DIV_NAME" />
+                <ScalarProperty Name="DIV_NUM" ColumnName="DIV_NUM" />
+                <ScalarProperty Name="LEVEL_CODE" ColumnName="LEVEL_CODE" />
+                <ScalarProperty Name="SCHOOL_YR" ColumnName="SCHOOL_YR" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Classes">
             <EntityTypeMapping TypeName="DisabilityAdvantageModel.Class">
               <MappingFragment StoreEntitySet="Class">
-                <ScalarProperty Name="Number" ColumnName="Number" />
-                <ScalarProperty Name="SchoolNumber" ColumnName="SchoolNumber" />
-                <ScalarProperty Name="GradeNumber" ColumnName="GradeNumber" />
-                <ScalarProperty Name="AcademicYearNumber" ColumnName="AcademicYearNumber" />
                 <ScalarProperty Name="StudentCount" ColumnName="StudentCount" />
+                <ScalarProperty Name="AcademicYearNumber" ColumnName="AcademicYearNumber" />
+                <ScalarProperty Name="GradeNumber" ColumnName="GradeNumber" />
+                <ScalarProperty Name="SchoolId" ColumnName="SchoolId" />
+                <ScalarProperty Name="Number" ColumnName="Number" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Disabilities">
             <EntityTypeMapping TypeName="DisabilityAdvantageModel.Disability">
               <MappingFragment StoreEntitySet="Disability">
-                <ScalarProperty Name="Number" ColumnName="Number" />
-                <ScalarProperty Name="ClassNumber" ColumnName="ClassNumber" />
-                <ScalarProperty Name="DisabilityTypeNumber" ColumnName="DisabilityTypeNumber" />
                 <ScalarProperty Name="StudentCount" ColumnName="StudentCount" />
+                <ScalarProperty Name="DisabilityTypeNumber" ColumnName="DisabilityTypeNumber" />
+                <ScalarProperty Name="ClassNumber" ColumnName="ClassNumber" />
+                <ScalarProperty Name="Number" ColumnName="Number" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="DisabilityTypes">
             <EntityTypeMapping TypeName="DisabilityAdvantageModel.DisabilityType">
               <MappingFragment StoreEntitySet="DisabilityType">
-                <ScalarProperty Name="Number" ColumnName="Number" />
-                <ScalarProperty Name="Code" ColumnName="Code" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Number" ColumnName="Number" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Divisions">
             <EntityTypeMapping TypeName="DisabilityAdvantageModel.Division">
               <MappingFragment StoreEntitySet="Division">
-                <ScalarProperty Name="Number" ColumnName="Number" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Number" ColumnName="Number" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Genders">
             <EntityTypeMapping TypeName="DisabilityAdvantageModel.Gender">
               <MappingFragment StoreEntitySet="Gender">
-                <ScalarProperty Name="Number" ColumnName="Number" />
-                <ScalarProperty Name="Code" ColumnName="Code" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Number" ColumnName="Number" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Grades">
             <EntityTypeMapping TypeName="DisabilityAdvantageModel.Grade">
               <MappingFragment StoreEntitySet="Grade">
-                <ScalarProperty Name="Number" ColumnName="Number" />
                 <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Number" ColumnName="Number" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Races">
             <EntityTypeMapping TypeName="DisabilityAdvantageModel.Race">
               <MappingFragment StoreEntitySet="Race">
-                <ScalarProperty Name="Number" ColumnName="Number" />
                 <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Number" ColumnName="Number" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Schools">
             <EntityTypeMapping TypeName="DisabilityAdvantageModel.School">
               <MappingFragment StoreEntitySet="School">
-                <ScalarProperty Name="Number" ColumnName="Number" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="DivisionNumber" ColumnName="DivisionNumber" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Number" ColumnName="Number" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="States">
             <EntityTypeMapping TypeName="DisabilityAdvantageModel.State">
               <MappingFragment StoreEntitySet="State">
-                <ScalarProperty Name="Number" ColumnName="Number" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Abbreviation" ColumnName="Abbreviation" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Number" ColumnName="Number" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

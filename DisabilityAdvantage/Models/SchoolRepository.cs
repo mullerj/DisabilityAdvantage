@@ -9,7 +9,7 @@ namespace DisabilityAdvantage.Models
     {
         private readonly DisabilityAdvantageContainer _context = new DisabilityAdvantageContainer();
 
-        public IQueryable<SchoolResult> FetchMany(string disability, string grade, string division)
+        public IEnumerable<SchoolResult> FetchMany(string disability, string grade, string division)
         {
             var disabilityName = _context.DisabilityTypes.SingleOrDefault(d => d.Code == disability).Name;
 
@@ -28,7 +28,7 @@ namespace DisabilityAdvantage.Models
                             TotalCount = s.Classes
                                 .FirstOrDefault(c => c.Grade.Code == grade).StudentCount,
                             DisabilityName = disabilityName
-                        });
+                        }).OrderByDescending(r => (double)r.DisabilityCount/(double)r.TotalCount).ToList();
         }
     }
 }
