@@ -22,6 +22,6 @@ namespace DisabilityAdvantage.Models
         public int Number { get; set; }
         public string Name { get; set; }
     
-        public virtual ICollection<School> Schools { get; set; }
+        internal virtual ICollection<School> Schools { get; set; }
     }
 }

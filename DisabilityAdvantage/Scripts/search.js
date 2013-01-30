@@ -26,6 +26,7 @@ function SearchViewModel() {
     //Create self variable to reference the ViewModel object
     var self = this;
     var theDal = new SchoolDal();
+    var divisionDal = new DivisionDal();
 
     self.Disabilities = ko.observableArray([]);
     self.Grades = ko.observableArray([]);
@@ -33,6 +34,7 @@ function SearchViewModel() {
     self.SelectedGrade = ko.observable("");
     self.SelectedDivision = ko.observable("");
     self.Schools = ko.observableArray([]);
+    self.Divisions = ko.observableArray([]);
 
     self.FindDisabilityName = function (id) {
         var output = "";
@@ -99,7 +101,16 @@ function SearchViewModel() {
         self.Schools(mappedSchools);
     };
 
+    self.FetchDivisions = function () {
+        divisionDal.Fetch(self.FetchDivisionsComplete);
+    };
+
+    self.FetchDivisionsComplete = function (data) {
+        self.Divisions(data);
+    };
+
     self.Fetch();
+    self.FetchDivisions();
 }
 
 function Criteria() {
@@ -119,6 +130,21 @@ function SchoolDal() {
 
     self.Fetch = function (criteria, callback) {
         var url = self.ApiUrl + "disability=" + criteria.SelectedDisability + "&grade=" + criteria.SelectedGrade + "&division=" + criteria.SelectedDivision;
+        $.getJSON(url, function (data) {
+            callback(data);
+        });
+    };
+}
+
+function DivisionDal() {
+    //Create self variable to reference the Dal object
+    var self = this;
+
+    //ApiUrl is the URL for the controller actions
+    self.ApiUrl = "api/divisions/";
+
+    self.Fetch = function (callback) {
+        var url = self.ApiUrl;
         $.getJSON(url, function (data) {
             callback(data);
         });

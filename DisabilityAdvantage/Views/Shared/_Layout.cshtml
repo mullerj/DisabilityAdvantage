@@ -8,11 +8,11 @@
     @Styles.Render("~/Content/less/responsive.less")
     @Styles.Render("~/Content/less/custom.less")
     @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
 </head>
 <body>
     @RenderBody()
 
-    @Scripts.Render("~/bundles/jquery")
     @RenderSection("scripts", required: false)
 </body>
 </html>

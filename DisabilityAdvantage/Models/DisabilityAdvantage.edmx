@@ -323,7 +323,7 @@
           </Key>
           <Property Type="Int32" Name="Number" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Schools" Relationship="DisabilityAdvantageModel.FK_School_Division" FromRole="Division" ToRole="School" />
+          <NavigationProperty Name="Schools" Relationship="DisabilityAdvantageModel.FK_School_Division" FromRole="Division" ToRole="School" a:GetterAccess="Internal" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" a:SetterAccess="Internal" />
         </EntityType>
         <EntityType Name="Gender">
           <Key>

@@ -29,7 +29,8 @@
 
             <div class="inputs-row">
                 <label for="schoolDivision">Your school division: </label>
-                <input type="search" class="search-query" placeholder="County name" data-bind="value: SelectedDivision" />
+                <select data-bind="options: Divisions, optionsText: 'Name', optionsValue: 'Name', value: SelectedDivision, optionsCaption: 'Choose division...'">
+                </select>
             </div>
 
             <br />
