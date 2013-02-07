@@ -35,6 +35,7 @@ function SearchViewModel() {
     self.SelectedDivision = ko.observable("");
     self.Schools = ko.observableArray([]);
     self.Divisions = ko.observableArray([]);
+    self.ResultMessage = ko.observable("");
 
     self.FindDisabilityName = function (id) {
         var output = "";
@@ -88,6 +89,7 @@ function SearchViewModel() {
     };
 
     self.Search = function () {
+        self.ResultMessage("Searching...");
         var criteria = new Criteria();
         criteria.SelectedDisability = self.SelectedDisability();
         criteria.SelectedGrade = self.SelectedGrade();
@@ -99,6 +101,13 @@ function SearchViewModel() {
     self.SearchComplete = function (data) {
         var mappedSchools = $.map(data, function (item) { return new SchoolViewModel(item, self) });
         self.Schools(mappedSchools);
+
+        if (self.Schools().length <= 0) {
+            self.ResultMessage("No results were found that match the criteria");
+        }
+        else {
+            self.ResultMessage("");
+        }
     };
 
     self.FetchDivisions = function () {
